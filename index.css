@@ -1,0 +1,8 @@
+.introduction{
+    width: 700px;
+    height: 500px;
+    border: 5px;
+    border-color: black;
+    border-style:dashed;
+    margin: 10px;
+}
