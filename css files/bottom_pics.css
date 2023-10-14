@@ -22,9 +22,13 @@
     padding: 20px;
 }
 .used-in{
+    border-radius:25px;
+    overflow:hidden;
     position: relative;
     width: 600px;
     height: 300px;
+    border: 2px solid rgb(108, 29, 137);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 .img{
     display: block;
@@ -52,7 +56,7 @@
     opacity: 1;
 }
 .image_overlay--blur{
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(25px);
 }
 .img_overlay > *{
     transform: translateY(20px);
@@ -70,6 +74,10 @@
 .img_desc{
     font-size: 1.25em;
     margin-top: 0.25em;
+    text-align: center;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 15px;
 }
 
 

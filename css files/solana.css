@@ -26,3 +26,21 @@ html, body{
 .description p{
     font-size: 25px;
 }
+
+.left-titles{
+    margin: 50px;
+    padding: 50px;
+    font-size: 5em;
+    font-style:  bold;
+    background: linear-gradient(to right,#9f5de4, #8774dc);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text; 
+
+}
+
+.hr{
+    height: 1px;
+    border:none;
+    background:linear-gradient(to right, black, #4ab2c2, black);
+}
