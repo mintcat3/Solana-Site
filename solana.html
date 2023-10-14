@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solana Blockchain Explorer</title>
+    
+    <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.js"></script>
+    <script src="sol.js"></script>
+</head>
+
+<body>
+    
+    <h1>Phantom Wallet Transaction</h1>
+    <button id="connect_button" onClick="connectWallet()">Connect</button>
+    <input class="Input" type="number" placeholder="Sol to send" id="quantity" />
+    <button class="button-1" onClick="sendButtonClick()">Send</button>
+    <p id="status_p"><span id="status"></span></p>
+    
+</body>
+</html>
