@@ -89,7 +89,7 @@ document.getElementById("question3").addEventListener("click", function(event) {
     // document.getElementById("q1answer").innerHTML = "incorrect";
     let choice = checkbutton("3").value
     // console.log(choice)
-    if (choice == 'thirdchoice') {
+    if (choice == 'firstchoice') {
         format_result("q3answer", true)
     } else {
         format_result("q3answer", false)
