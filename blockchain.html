@@ -7,6 +7,7 @@
 </head>
     <link rel="stylesheet" href="css files/blockchainstyle.css">
     <link rel="stylesheet" href="css files/navbar.css">
+    <link rel="stylesheet" href="css files/quiz.css">
 <body>
     <div class = "navbar">
         <div class="dropdown">
@@ -70,19 +71,19 @@
     </section>
     
     
-    <section>
-        <div>
-            What da dog doing?
-            <form action="">
-                    <input type="radio" id="answer1" name="answer1">
-                    <label for="answer1">Hello</label><br>
-                    <input type="radio" id="answer2" name="answer2">
-                    <label for="answer2">Hello2</label><br>
-                    <input type="radio" id="answer3" name="answer3">
-                    <label for="answer3">Hello3</label><br>
-            </form>
-        </div>
-        
+    <section class="Quiz">
+        <h3>what da dog doing</h3>
+            <div class="radio-buttons">
+                <div id='quiz-choices' class="quiz-choices">
+                    <input type="radio" name="temp" id="temp1" value="firstchoice"> Summer <br> 
+                    <input type="radio" name="temp" id="temp2" value="secondchoice"> Winter <br> 
+                    <input type="radio" name="temp" id="temp3" value="thirdchoice"> Rainy
+                </div>
+                
+                <div id="q1answer"></div>
+            </div> 
     </section>
+
+    <script src="script/quiz.js"></script>
 </body>
 </html>
