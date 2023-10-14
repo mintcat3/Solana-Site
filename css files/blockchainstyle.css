@@ -7,15 +7,21 @@ body {
 }
 
 header {
-    background-color: #B943F1;
-    text-align: center;
-    padding: 5px 0px;
+    /* background-color: #B943F1; */
+    background-image: url("../blockchainimages/Blockchain_Grid.jpg");
+    /* text-align: center; */
+    padding: 400px 100px;
+    background-size: 2000px;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 section {
     background-color: #18E5AE;
     margin: 10px 100px;
     border-radius: 50px;
+    border-style: solid;
+    border-color: #B943F1;
 }
 
 .blockchain-explain.text {
@@ -46,4 +52,6 @@ section {
 img {
     width: 300px;
     border-radius: 10px;
+    border-style: solid;
+    border-color: black;
 }
