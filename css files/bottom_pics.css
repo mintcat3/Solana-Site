@@ -10,6 +10,7 @@
 }
 .bottom-pics h2{
     text-align: center;
-    background: linear-gradient(#19e5af, #6992ce);
-
+    background: linear-gradient(to right,#19e5af, #6992ce);
+    -webkit-text-fill-color: transparent; 
+    -webkit-background-clip: text; 
 }
