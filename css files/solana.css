@@ -1,0 +1,19 @@
+html, body{
+    height: 100%;
+    margin: 0;
+    background: radial-gradient(black, #18202c);
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+body{
+    justify-content: center;
+}
+
+.description{
+    color: white;
+    width: 500px;
+    height: 350px;
+    text-align: center;
+    align-self: center;
+}
