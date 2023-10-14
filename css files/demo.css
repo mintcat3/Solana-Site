@@ -1,0 +1,7 @@
+html, body{
+    height: 100%;
+    margin: 0;
+    background: radial-gradient(black, #18202c);
+    overflow-x: hidden;
+    max-width: 100%;
+}
