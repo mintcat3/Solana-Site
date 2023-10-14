@@ -6,11 +6,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.center {
-    vertical-align: middle;
-    
-}
-
 header {
     background-color: #B943F1;
     text-align: center;
@@ -19,29 +14,36 @@ header {
 
 section {
     background-color: #18E5AE;
+    margin: 10px 100px;
+    border-radius: 50px;
 }
 
 .blockchain-explain.text {
-    background-color: red;
+    /* background-color: red; */
     text-align: center;
 }
 
-.blockchain-explain.benefit {
+.blockchain-explain.reason {
+    text-align: center;
+}
+
+.image-div {
     display: flex;
 }
 
-.blockchain-explain.benefit figure {
+.image-div figure {
+    /* background-color: red; */
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 25%;
 }
 
-.caption {
+.center {
     text-align: center;
 }
 
-.centered-image {
-    margin-left: 50%;
-    margin-right: 50%;
+img {
+    width: 300px;
+    border-radius: 10px;
 }
