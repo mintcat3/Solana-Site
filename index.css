@@ -1,3 +1,10 @@
+html, body{
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(black, #273447);
+    overflow-x: hidden;
+    max-width: 100%;
+}
 .section-1{
     display: flex;
     align-items: center;
@@ -16,4 +23,18 @@
     border-color: white;
     border-style:dashed;
     margin-top: -90px;
+}
+.intro-p p{
+    text-align: center;
+    font-size: 20px;
+}
+
+footer{
+    background-color: gray;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    padding: 20px;
+    margin: 0;
+    width: 100%;
 }
