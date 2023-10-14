@@ -6,14 +6,23 @@ html, body{
     max-width: 100%;
 }
 
-body{
+.description-box{
+    width: 70%;
+    height: 350px;
     justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
-
 .description{
     color: white;
-    width: 500px;
-    height: 350px;
     text-align: center;
-    align-self: center;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.description h1{
+    font-size: 50px
+}
+.description p{
+    font-size: 25px;
 }

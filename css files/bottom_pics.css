@@ -1,0 +1,15 @@
+.bottom-pics{
+    display:flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.bottom-pics img{
+    width: 350px;
+    height: 350px;
+}
+.bottom-pics h2{
+    text-align: center;
+    background: linear-gradient(#19e5af, #6992ce);
+
+}
