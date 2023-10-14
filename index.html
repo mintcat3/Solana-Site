@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel = "stylesheet" href = "css files/navbar.css">
-    <link rel = "stylesheet" href = "css files/index.css">
-    <link rel = "stylesheet" href = "css files/bottom_nav.css">
+    <title>Home</title>
+    <link rel="stylesheet" href="css files/navbar.css">
+    <link rel="stylesheet" href="css files/index.css">
+    <link rel="stylesheet" href="css files/bottom_nav.css">
 </head>
+
 <body>
-    <div class = "navbar">
-        <div class="dropdown">
-            <div class = "dropbutton">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
+    <div class="navbar">
+        <a href="index.html" id="homebut">Home</a>
+        <div id="navbar-right">
+            <div class="dropdown">
+                <a href="blockchain.html">Blockchains</a>
+                <div class="dropdown-content">
+                    <a href="">Link 1</a>
+                    <a href="">Link 2</a>
+                </div>
             </div>
-            <div class = "dropcontent">
-                <a href = "index.html">Home</a>
-                <a href = "blockchain.html"> Blockchain </a>
-                <a href = "solana_page.html"> Solana </a>
-            </div>
+            <a href="solana_page.html">Solana</a>
+            <a href="solana.html">Demo</a>
         </div>
+
     </div>
 
     <div class = "section-1">
@@ -45,19 +47,19 @@
 
     <div class = "bottom-navigations">
         <span class = "nav-box-border">
-            <a href = "blockchain.html" class = "blockchains-nav">
+            <a href = "blockchain.html">
                 <img src = "index image/blockchains_nav.png" alt = "button 1">
             </a>
         </span>
         <span class = "nav-box-border">
-            <a a href = "solana_page.html" class = "solana-nav">
+            <a href = "solana_page.html">
                 <img src = "index image/solana_nav.png" alt = "button 2">
             </a>
         </span>
 
         <span class = "nav-box-border">
-            <a a href = "demo.html" class = "solana-nav">
-                <img src = "index image/solana_nav.png" alt = "button 2">
+            <a href = "solana.html">
+                <img src = "index image/solana_nav.png" alt = "button 3"> <!--needs a diff img lol-->
             </a>
         </span>
     </div>
