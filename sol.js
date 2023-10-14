@@ -1,8 +1,8 @@
 
-//import web3 from '/node_modules/@solana/web3.js'
-// const web3 = require("@solana/web3.js");
+// import solanaWeb3 from '/node_modules/@solana/web3.js/lib/index.iife.js' //module
+// const solanaWeb3 = require("@solana/web3.js");
 
-// connect your phantom wallet and make a transaction button, then display the transaction shit of ur account
+// connect your phantom wallet and make a transaction button, then display the transaction stuff of ur account
 
 
 var wallet;
@@ -80,7 +80,7 @@ function signInTransactionAndSendMoney(destPubkeyStr, quantity) {
         transaction.add(instruction);
         transaction.feePayer = wallet.publicKey;
         let hash = await connection.getRecentBlockhash();
-        copnsole.log("blockhash", hash);
+        console.log("blockhash", hash);
         transaction.recentBlockhash = hash.blockhash;
         return transaction;
     }
@@ -91,4 +91,6 @@ function signInTransactionAndSendMoney(destPubkeyStr, quantity) {
         return signature;
     }
 }
+
+
 

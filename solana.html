@@ -16,6 +16,28 @@
     <input class="Input" type="number" placeholder="Sol to send" id="quantity" />
     <button class="button-1" onClick="sendButtonClick()">Send</button>
     <p id="status_p"><span id="status"></span></p>
+
+    <!-- Include Buffer polyfill -->
+    <script>
+        // Buffer polyfill for the browser
+        if (typeof global === 'undefined') {
+            global = window;
+        }
+        if (typeof global.Buffer === 'undefined') {
+            global.Buffer = {
+                from: function (data, encoding) {
+                    if (encoding !== 'hex') {
+                        throw new Error('Only hex encoding is supported in this polyfill.');
+                    }
+                    const bytes = [];
+                    for (let i = 0; i < data.length; i += 2) {
+                        bytes.push(parseInt(data.substr(i, 2), 16));
+                    }
+                    return new Uint8Array(bytes);
+                },
+            };
+        }
+    </script>
     
 </body>
 </html>
