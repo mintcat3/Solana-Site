@@ -1,7 +1,7 @@
 .navbar{
-    overflow: hidden;
-    background-color: #6893CE;
-    margin: 0
+    overflow-x: hidden;
+    background-color: black;
+    max-width: 100%;
 }
 
 
@@ -17,6 +17,7 @@
 .dropdown{
     float: right;
     overflow: hidden;
+    margin-right: 50px;
 }
 
 .dropdown .dropbutton{
@@ -29,9 +30,12 @@
     margin: 0;
 }
 
-.dropbutton img{
+
+.line{
     width: 25px;
-    height: 25px;
+    height: 3px;
+    background-color: white;
+    margin-bottom: 5px
 }
 
 .navbar a:hover,.dropdown:hover .dropbutton{
@@ -39,22 +43,23 @@
 }
 
 .dropcontent{
-    display:none;
+    display: none;
     position: absolute;
     background-color:#6893CE;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    text-align: left;
 }
 
 .dropcontent a{
-    float: none;
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     text-align: left;
+    right: 100%;
 }
 
 .dropdown:hover .dropcontent{
-    display: block
+    display: block;
 }
