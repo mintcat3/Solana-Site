@@ -34,6 +34,10 @@ ul {
     list-style-type: none;
 }
 
+li {
+    list-style-type: none;
+}
+
 section {
     /* background-color: red; */
     /* background: linear-gradient(gray, rgba(73, 67, 70, 0.871) ); */
@@ -69,7 +73,7 @@ section {
     text-align: center;
 } */
 
-img {
+.image-div img {
     width: 300px;
     border-radius: 10px;
     border-style: solid;
@@ -90,12 +94,36 @@ img {
     font-size: 15px;
     box-shadow: black 10px 10px 10px 1px;
   }
+
+  .collapsible-display {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+    font: bold;
+  }
+
+  .dropdown-arrow {
+    width: 40px;
+    margin: auto;
+    transform: rotate(0deg);
+    transition: rotate 0.2s ease-in;
+  }
   
 .active, .collapsible:hover {
     background: white;
     color: black;
   }
-  
+
+
+/* @keyframes rotate {
+    50% {.dropdown-arrow }
+} */
+/* 
+.collapsible:onClick {
+    animation-name: rotate;
+    animation-duration: 1s;
+} */
+
 .content {
     padding: 0 18px;
     max-height: 0;
