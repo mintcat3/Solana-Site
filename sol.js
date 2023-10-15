@@ -28,7 +28,7 @@ async function sendButtonClick(){
     const quantity = document.getElementById("quantity").value
     if (quantity != null && quantity != 0) {
         document.getElementById("status_p").text = "Status";
-        document.getElementById("status_p").innerText = "Sending " + quantity + " SOL to " + ellipsizeAddress(receiverAddress) + " account address";
+        document.getElementById("status_p").innerText = "Sending " + quantity + " SOL to " + ellipsizeAddress(receiverAddress) + " account address\n" + "Loading...";
         await signInTransactionAndSendMoney(receiverAddress, quantity)
     } else {
         document.getElementById("status_p").text = "Status";
