@@ -63,7 +63,7 @@ document.getElementById("question1").addEventListener("click", function(event) {
 } */
     let choice = checkbutton("1").value
     let correct_string = 'Correct: Satoshi Nakamoto created Bitcoin in 2008.'
-    let incorrect_string = 'Incorrect: They were integral to the creation of other popular cryptocurrency but not Bitcoin'
+    let incorrect_string = 'Incorrect: They were integral to the creation of other popular cryptocurrency but not Bitcoin.'
     if (choice == 'thirdchoice') {
         format_result("q1answer", true, correct_string)
     } else {
@@ -73,8 +73,8 @@ document.getElementById("question1").addEventListener("click", function(event) {
 
 document.getElementById("question2").addEventListener("click", function(event) {
     let choice = checkbutton("2").value
-    let correct_string = 'Correct: It contains the hash of the previous block'
-    let incorrect_string = 'Incorrect: Close, but it is not the data of the previous block'
+    let correct_string = 'Correct: It contains the hash of the previous block.'
+    let incorrect_string = 'Incorrect: Close, but it is not the data of the previous block.'
     if (choice == 'secondchoice') {
         format_result("q2answer", true, correct_string)
     } else {
