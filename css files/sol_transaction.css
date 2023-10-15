@@ -1,17 +1,32 @@
-#status_p {
-    color: #ffffff;
-    background: #ff1a1a;
-    border: 1px solid #3a47ff;
+.entire-transaction{
+    display:flex;
+    justify-content: center;
+    
+}
+.transaction-output{
+    display:flex;
+    justify-content: center;
+}
+.transaction-output #status_p {
+    color: black;
+    background: white;
+    width: 500px;
+    height: auto;
+    border: 5px solid transparent;
+    border-image: linear-gradient(to right, #6f87f2, #7e257e);
+    border-image-slice: 1;
     padding: 10px;
-    margin: 10px 0;
+    margin: 15px;
+    margin-bottom: 25px;
     font-size: 16px;
 }
 
 #connect_button, .button-1{
+    border: 2px solid white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
     padding: 20px 50px 20px 50px;
-    margin: 15px;
+    margin: 50px 0;
     background: linear-gradient(to right, #da77f6, #5e2aa2);
-    border: 2px solid linear-gradient(to right, #ffffff, #4f4f4f);
     border-radius: 25px;
     font-size: 20px;
     font-weight: bold;
@@ -21,6 +36,7 @@
 .transaction-div{
     width:auto;
     height: 150px;
+
 }
 #connect_button:hover, .button-1:hover{
     position: relative;

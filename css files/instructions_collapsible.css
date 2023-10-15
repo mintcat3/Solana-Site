@@ -1,7 +1,12 @@
+.entire-collapsible{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  flex-direction: column;
+}
 .collapsible {
   display: flex;
-  justify-self: center;
-  align-self: center;
   margin: 25px;
   background-color: #3498db; /* Color for the collapsible button */
   color: white;
@@ -22,31 +27,41 @@
 
 .collapsible-content {
   max-height: 0; /* Set initial max-height to 0 for collapse effect */
-  overflow: hidden;
+  overflow-y: auto;
   display: block;
   transition: max-height 0.3s ease-out; /* Animation for the collapsible content */
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: transparent transparent; /* For Firefox */
+  text-align: center;
+}
+
+/* Style the scrollbar for WebKit browsers (like Chrome, Safari) */
+.collapsible-content::-webkit-scrollbar {
+  width: 0;
+}
+
+/* Style the scrollbar track and thumb for WebKit browsers */
+.collapsible-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.collapsible-content::-webkit-scrollbar-thumb {
+  background: transparent;
 }
 
 .collapsible-content img {
-  margin: 20px;
+  margin: 20px auto;
   border: 2px solid white;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
   padding: 20px;
-  width: 25%;
   height: auto;
-  display: flex;
+  display: block;
   margin-bottom: 10px;
 }
 
-.collapsible-content .instructions {
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
 
 .collapsible-content p {
   padding: 20px;
   color: white;
   font-size: 25px;
-  text-align: left;
 }

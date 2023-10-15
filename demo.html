@@ -29,55 +29,81 @@
         </div>
     </div>
 
-    <button class="collapsible" onclick="toggleCollapsible()">Show Instructions to Get Started</button>
-    <span class="collapsible-content">
-        <div>
-            <img src="demo images/step1.png" alt="Image 1">
-            <p>1. Download the phantom wallet chrome extension</p>
-        </div>
-        <div>
-            <img src="demo images/step 2.png" alt="Image 2">
-            <p>2. Select "Create a new wallet."</p>
 
+    <div class="entire-collapsible">
+        <button class="collapsible" onclick="toggleCollapsible()">Show Instructions to Get Started</button>
+        <div class="collapsible-content">
+            <div>
+                <img src="demo images/step1.png" alt="Image 1">
+                <p>1. Download the phantom wallet chrome extension</p>
+            </div>
+            <div>
+                <img src="demo images/step 2.png" alt="Image 2">
+                <p>2. Select "Create a new wallet."</p>
+    
+            </div>
+            <div>
+                <img src="demo images/step 3.png" alt="Image 2">
+                <p>3. Use any password you would like then click continue</p>
+            </div>
+    
+            <div>
+                <img src="demo images/step 4.png" alt="Image 2">
+                <p>4. Open the chrome extension, go to the burger menu on the top left, open settings at the bottom, then head into developer settings.</p>
+            </div>
+    
+            <div>
+                <img src="demo images/step 5.png" alt="Image 2">
+                <p>5. In developer settings make sure you turn on Testnet Mode.</p>
+            </div>
+    
+            <div>
+                <img src="demo images/step 6.png" alt="Image 2">
+                <p>6. Under settings, head over to your account, then account address, and copy the Solona Devnet address.</p>
+            </div>
+    
+            <div>
+                <img src="demo images/step 7.png" alt="Image 2">
+                <p>7. Head over to the SolFaucet website, paste your address into the textbox. Then set the value of SOL to 10, and select the Devnet option.</p>
+            </div>
         </div>
-        <div>
-            <img src="demo images/step 3.png" alt="Image 2">
-            <p>3. Use any password you would like then click continue</p>
+    </div>
+    
+    <hr class = "hr"></hr>
+    
+    <div class="functionality">
+        <div class = "title-desc">
+            <h1>Phantom Wallet Transaction</h1>
+            <div class = "functionality-p">
+                <p>The functionality of this is to simulate sending SOL using a phantom wallet, which is essentially a fake wallet
+                    where you're not using real SOL. First you begin by following the instructions on setting up a phantom wallet. 
+                    After that has been set up, click "connect". Then type in the amount of SOL you want to be transferred. Then 
+                    click send. The text appearing below is a very simplified version of what a blockchain is. The information displayed
+                    is what would be on one block in a blockchain. It carries the data of the transaction and saves it.
+                </p> 
+            </div>
+       
         </div>
 
-        <div>
-            <img src="demo images/step 4.png" alt="Image 2">
-            <p>4. Open the chrome extension, go to the burger menu on the top left, open settings at the bottom, then head into developer settings.</p>
+    </div>
+    <div class="entire-transaction">
+        <div class = "transaction-div">
+            <button id="connect_button" onClick="connectWallet()">Connect</button>
+            <input class="Input" type="number" placeholder="Sol to send" id="quantity" />
+            <button class="button-1" onClick="sendButtonClick()">Send</button>
         </div>
-
-        <div>
-            <img src="demo images/step 5.png" alt="Image 2">
-            <p>5. In developer settings make sure you turn on Testnet Mode.</p>
-        </div>
-
-        <div>
-            <img src="demo images/step 6.png" alt="Image 2">
-            <p>6. Under settings, head over to your account, then account address, and copy the Solona Devnet address.</p>
-        </div>
-
-        <div>
-            <img src="demo images/step 7.png" alt="Image 2">
-            <p>7. Head over to the SolFaucet website, paste your address into the textbox. Then set the value of SOL to 10, and select the Devnet option.</p>
-        </div>
-    </span>
-    <div class = "transaction-div">
-        <h1 class = "Demo-Title">Phantom Wallet Transaction</h1>
-        <button id="connect_button" onClick="connectWallet()">Connect</button>
-        <input class="Input" type="number" placeholder="Sol to send" id="quantity" />
-        <button class="button-1" onClick="sendButtonClick()">Send</button>
     </div>
 
-    <div>
+    <div class = "transaction-output">
         <p id="status_p"><span id="status"></span></p>
     </div>
+    
+    <hr class = "hr"></hr>
 
+    <div class = "blockchain-image">
+        <img src = "demo images/block_chain.png">
+    </div>
 
-    <!-- Include Buffer polyfill -->
     <script>
         // Buffer polyfill for the browser
         if (typeof global === 'undefined') {
@@ -106,7 +132,7 @@
           var button = document.querySelector('.collapsible');
           
           if (content.style.maxHeight === '0px' || content.style.maxHeight === '') {
-            content.style.maxHeight = '800px';  /* Adjust the max height to match your desired height */
+            content.style.maxHeight = '500px';  /* Adjust the max height to match your desired height */
             button.textContent = 'Hide Instructions to Get Started';
           } else {
             content.style.maxHeight = '0px';
