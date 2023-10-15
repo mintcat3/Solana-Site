@@ -104,7 +104,10 @@
         <div class="blockchain-image-desc">
             <p>Imagine each one of these connected blocks to be a block of data. Everytime the "send" button is clicked, it essentially creates a new block with new data that are linked to eachother.</p>
         </div>
-        <img src = "demo images/block_chain.png">
+        <div class ="hidden">
+            <img src = "demo images/block_chain.png">
+        </div>
+        
     </div>
 
     <script>
@@ -143,6 +146,20 @@
           }
         }
 
+        const observer = new IntersectionObserver((entries) => { 
+        // bc handles multiple elements, needs for each loop
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            } else { // if wanna show animation multiple times use this else
+                entry.target.classList.remove('show');
+            }
+
+            })
+        })
+
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach((el) => observer.observe(el))
     </script>
 </body>
 </html>
