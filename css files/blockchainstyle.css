@@ -91,12 +91,12 @@ img {
     box-shadow: black 10px 10px 10px 1px;
   }
   
-  .active, .collapsible:hover {
+.active, .collapsible:hover {
     background: white;
     color: black;
   }
   
-  .content {
+.content {
     padding: 0 18px;
     max-height: 0;
     overflow: hidden;
@@ -105,18 +105,37 @@ img {
     box-shadow: black 5px 5px 10px 10px;
   }
 
-  .crypto-title {
+.crypto-title {
     margin-bottom: auto;
   }
 
-  .flex {
+.flex {
     display: flex;
     justify-content: space-around;
   }
 
-  .coin {
+.coin {
     margin-bottom: 60px;
     /* background-color: red; */
     text-align: center;
   }
 
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+    transition: all 1s;
+}
+
+.hidden-left {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show{
+    opacity:1;
+    filter: blur(0);
+    transform: translateX(0);
+}

@@ -120,30 +120,30 @@
         <div class="flex">
             <div class="crypto-display">
                 <div class="coin">
-                    <p>1. Bitcoin</p>
-                    <p>- Market Cap: $535.7 billion</p>
+                    <p class="hidden-left">1. Bitcoin</p>
+                    <p class="hidden-left">- Market Cap: $535.7 billion</p>
                 </div>
                 <div class="coin">
-                    <p>2. Ethereum</p>
-                    <p>- Market Cap: $189.7 billion</p>
+                    <p class="hidden-left">2. Ethereum</p>
+                    <p class="hidden-left">- Market Cap: $189.7 billion</p>
                 </div>
                 <div class="coin">
-                    <p>3. Tether (USDT)</p>
-                    <p>- Market Cap: $83.5 billion</p>
+                    <p class="hidden-left">3. Tether (USDT)</p>
+                    <p class="hidden-left">- Market Cap: $83.5 billion</p>
                 </div>
             </div>
             <div class="crypto-display">
                 <div class="coin">
-                    <p>4. Binance Coin</p>
-                    <p>- Market Cap: $31.9 billion</p>
+                    <p class="hidden">4. Binance Coin</p>
+                    <p class="hidden">- Market Cap: $31.9 billion</p>
                 </div>
                 <div class="coin">
-                    <p>5. XRP</p>
-                    <p>- Market Cap: $26.5 billion</p>
+                    <p class="hidden">5. XRP</p>
+                    <p class="hidden">- Market Cap: $26.5 billion</p>
                 </div>
                 <div class="coin">
-                    <p>6. U.S. Dollar Coin</p>
-                    <p>- Market Cap: $25.4 billion</p>
+                    <p class="hidden">6. U.S. Dollar Coin</p>
+                    <p class="hidden">- Market Cap: $25.4 billion</p>
                 </div>
             </div>
         </div>
@@ -234,5 +234,20 @@
 
     <script src="js files/blockchain_quiz.js"></script>
     <script src="js files/blockchain.js"></script>
+    <script>
+        const observer = new IntersectionObserver((entries) => { 
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                } else { 
+                    entry.target.classList.remove('show');
+                }
+            })
+        })
+        const hiddenElements = document.querySelectorAll('.hidden');
+        const hiddenElementsLeft = document.querySelectorAll('.hidden-left');
+        hiddenElements.forEach((el) => observer.observe(el))
+        hiddenElementsLeft.forEach((el) => observer.observe(el))
+    </script>
 </body>
 </html>
