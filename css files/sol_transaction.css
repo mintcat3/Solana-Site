@@ -1,9 +1,36 @@
 #status_p {
-    color: #ffffff; /* text color */
-    background-color: #ff1a1a; /* background color */
-    border: 1px solid #3a47ff; /* border color */
-    padding: 10px; /* space inside the element */
-    margin: 10px 0; /* space outside the element */
-    font-family: 'Courier New', Courier, monospace; /* font family */
-    font-size: 16px; /* font size */
+    color: #ffffff;
+    background: #ff1a1a;
+    border: 1px solid #3a47ff;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+#connect_button, .button-1{
+    padding: 20px 50px 20px 50px;
+    margin: 15px;
+    background: linear-gradient(to right, #da77f6, #5e2aa2);
+    border: 2px solid linear-gradient(to right, #ffffff, #4f4f4f);
+    border-radius: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    transition:  border 0.3s ease, transform 0.25s ease;
+}
+
+.transaction-div{
+    width:auto;
+    height: 150px;
+}
+#connect_button:hover, .button-1:hover{
+    position: relative;
+    border: 2px solid white;
+    transform: translateY(-5px);
+
+}
+.Input{
+    color: black;
+    border: 5px solid black;
+    border-radius: 25px;
+    font-size: 25px;
 }

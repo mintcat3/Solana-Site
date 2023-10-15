@@ -5,3 +5,11 @@ html, body{
     overflow-x: hidden;
     max-width: 100%;
 }
+
+.Demo-Title{
+    background: linear-gradient(to right,#ed8be0, #370245);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text; 
+
+}
