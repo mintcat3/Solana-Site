@@ -71,3 +71,47 @@ img {
     border-width: 5px;
     border-color: black;
 }
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+.cryto-display {
+    display: flex;
+    align-items: center;
+}
+
+.coin {
+    margin: 20px;
+    border: 5px solid black;
+    padding: 80px 250px;
+}
+
+
+.collapsible {
+    background: linear-gradient(to right,#9f5de4, #8774dc);
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    box-shadow: black 10px 10px 10px 1px;
+  }
+  
+  .active, .collapsible:hover {
+    background: white;
+    color: black;
+  }
+  
+  .content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: transparent;
+    box-shadow: black 5px 5px 10px 10px;
+  }
