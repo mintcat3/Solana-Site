@@ -16,13 +16,14 @@ function connectWallet() {
         } catch (err) {
             console.log(err);
         }
+
     })();
     window.solana.on("connect", () => document.getElementById("connect_button").innerText = "Connected");
     console.log(window)
 }
 
 async function sendButtonClick(){
-    const receiverAddress = "3AAiGng32r5SZVr8RLi6GxusY8xgXKqedPY74dRkixEA" // my devnet key
+    const receiverAddress = "8FLkPhLqfaawJh8CfG2Kf2HLVHEyqnfmkXbDxis3Wemg" // my devnet key
 
     const quantity = document.getElementById("quantity").value
     if (quantity != null && quantity != 0) {
@@ -85,9 +86,44 @@ function signInTransactionAndSendMoney(destPubkeyStr, quantity) {
         return transaction;
     }
 
+    // async function signAndSendTransaction(wallet, transaction, connection) {
+    //     const { signature } = await window.solana.signAndSendTransaction(transaction);
+    //     await connection.confirmTransaction(signature);
+    //     return signature;
+    // }
+
     async function signAndSendTransaction(wallet, transaction, connection) {
         const { signature } = await window.solana.signAndSendTransaction(transaction);
-        await connection.confirmTransaction(signature);
+        console.log('Transaction signature:', signature);
+    
+        // Wait for full confirmation
+        let confirmedTransaction = null;
+        while (confirmedTransaction === null) {
+            confirmedTransaction = await connection.getConfirmedTransaction(signature);
+            if (confirmedTransaction === null) {
+                console.log('Waiting for full confirmation...');
+                await new Promise(resolve => setTimeout(resolve, 1000));  // Wait for 1 second
+            }
+        }
+    
+        console.log('Transaction fully confirmed');
+        // Extract relevant information
+        const blockTime = new Date(confirmedTransaction.blockTime * 1000).toLocaleString();
+        const feePayer = confirmedTransaction.transaction.feePayer;
+        const status = confirmedTransaction.meta.status;
+        const receiverWalletID = transaction.instructions[0].keys[1].pubkey.toString();
+        const amount = document.getElementById("quantity").value
+
+        // Format transaction details
+        const transactionDetails =
+            `Block Time: ${blockTime}\n` +
+            `Sender/Fee Payer: ${feePayer}\n` +
+            `Receiver: ${receiverWalletID}\n` + 
+            `Amount sent: ${amount} SOL\n` + 
+            `Status: Success`;
+
+        // Update webpage with transaction details
+        document.getElementById("status_p").innerText = "Transaction Details:\n" + transactionDetails;
         return signature;
     }
 }
