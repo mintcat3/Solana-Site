@@ -54,11 +54,11 @@ function format_result(question, result, string) {
     }
 }
 
-function highlight_choice(num_of_question, question_number, choice_num, color) {
+function highlight_choice(num_of_question, question_number, choice_num, color1, color2) {
     for (let i = 1; i <= num_of_question; i++) {
         var string = "question" + question_number + "choice" + i.toString() + "-text";
         if (i == choice_num) {
-            document.getElementById(string).style.borderColor = color
+            document.getElementById(string).style.borderColor = color1
         } else {
             document.getElementById(string).style.borderColor = 'white'
         }
@@ -106,18 +106,18 @@ document.getElementById("question2").addEventListener("click", function(event) {
 
 document.getElementById("question3").addEventListener("click", function(event) {
     let choice = checkbutton("3").value
-    let correct_string = 'Correct: '
-    let incorrect_string = 'Incorrect: '
+    let correct_string = 'Correct: Along with a strong encryption, you would need to hack every block in the chain.'
+    let incorrect_string = 'Incorrect: Being decentralized does not come with the benefit of security.'
     if (choice == 'firstchoice') {
-        format_result("q3answer", false, incorrect_string)
-        highlight_choice(3, "3", 1, 'red')
+        format_result("q3answer", true, correct_string)
+        highlight_choice(3, "3", 1, 'rgb(49, 195, 49)')
     } 
     if (choice =='secondchoice') {
         format_result("q3answer", false, incorrect_string)
         highlight_choice(3, "3", 2, 'red')
     }
     if (choice == 'thirdchoice') {
-        format_result("q3answer", true, correct_string)
-        highlight_choice(3, "3", 3, 'rgb(49, 195, 49)')
+        format_result("q3answer", false, incorrect_string)
+        highlight_choice(3, "3", 3, 'red')
     } 
 })

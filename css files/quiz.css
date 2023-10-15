@@ -9,11 +9,12 @@
     /* background-color: red; */
     border-style: solid;
     border-radius: 50px;
+    box-shadow: black 15px 15px 20px 20px;
 }
 
 .quiz-choices {
     margin-left: 8%;
-    /* background-color: red; */
+    /* background-color: rgb(243, 94, 94); */
 }
 
 .question-text {
