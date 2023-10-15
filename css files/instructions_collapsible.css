@@ -1,0 +1,36 @@
+  /* CSS */
+  .collapsible {
+    background-color: #3498db; /* Color for the collapsible button */
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+  }
+
+  .collapsible-content {
+    display: none;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out; /* Animation for the collapsible content */
+  }
+
+  .collapsible-content img {
+    width: 100%; /* Adjust the image width */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin-bottom: 10px; /* Adjust the margin between images */
+}
+
+.collapsible-content .instructions{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+}
+.collapsible-content > *{
+    font-size: 100px;
+    text-align: center;
+}

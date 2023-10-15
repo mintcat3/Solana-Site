@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="css files/navbar.css">
     <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.js"></script>
     <script src="sol.js"></script>
-    <link rel = "stylsheet" href = "css files/demo.css">
+    <link rel = "stylesheet" href = "css files/demo.css">
+    <link rel = "stylesheet" href = "css files/instructions_collapsible.css">
+    <link rel = "stylesheet" href = "css files/sol_transaction.css">
 </head>
 
 <body>
@@ -27,6 +29,44 @@
         </div>
     </div>
 
+    <button class="collapsible" onclick="toggleCollapsible()">Show Images</button>
+    <div class="collapsible-content">
+        <div>
+            <img src="demo images/step1.png" alt="Image 1">
+            <p>Download the phantom wallet chrome extension</p>
+        </div>
+        <div>
+            <img src="demo images/step 2.png" alt="Image 2">
+            <p>Select "Create a new wallet."</p>
+
+        </div>
+        <div>
+            <img src="demo images/step 3.png" alt="Image 2">
+            <p>Use any password you would like then click continue</p>
+        </div>
+
+        <div>
+            <img src="demo images/step 4.png" alt="Image 2">
+            <p>Open the chrome extension, go to the burger menu on the top left, open settings at the bottom, then head into developer settings.</p>
+        </div>
+
+        <div>
+            <img src="demo images/step 5.png" alt="Image 2">
+            <p>In developer settings make sure you turn on Testnet Mode.</p>
+        </div>
+
+        <div>
+            <img src="demo images/step 6.png" alt="Image 2">
+            <p>Under settings, head over to your account, then account address, and copy the Solona Devnet address.</p>
+        </div>
+
+        <div>
+            <img src="demo images/step 7.png" alt="Image 2">
+            <p>Head over to the SolFaucet website, paste your address into the textbox. Then set the value of SOL to 10, and select the Devnet option.</p>
+        </div>
+
+      <!-- Add more images as needed -->
+    </div>
 
     <h1>Phantom Wallet Transaction</h1>
     <button id="connect_button" onClick="connectWallet()">Connect</button>
@@ -56,5 +96,12 @@
         }
     </script>
     
+    
+    <script>
+        function toggleCollapsible() {
+          const content = document.querySelector('.collapsible-content');
+          content.style.display = (content.style.display === 'none' || content.style.display === '') ? 'block' : 'none';
+        }
+      </script>
 </body>
 </html>
