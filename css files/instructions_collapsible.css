@@ -1,36 +1,52 @@
-  /* CSS */
-  .collapsible {
-    background-color: #3498db; /* Color for the collapsible button */
-    color: white;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 16px;
-  }
-
-  .collapsible-content {
-    display: none;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out; /* Animation for the collapsible content */
-  }
-
-  .collapsible-content img {
-    width: 100%; /* Adjust the image width */
-    height: auto; /* Maintain aspect ratio */
-    display: block;
-    margin-bottom: 10px; /* Adjust the margin between images */
+.collapsible {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  margin: 25px;
+  background-color: #3498db; /* Color for the collapsible button */
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  border: 2px solid white;
+  border-radius: 25px;
+  text-align: center;
+  outline: none;
+  font-size: 16px;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-.collapsible-content .instructions{
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    
+.collapsible:hover {
+  color: black;
+  background-color: white;
 }
-.collapsible-content > *{
-    font-size: 100px;
-    text-align: center;
+
+.collapsible-content {
+  max-height: 0; /* Set initial max-height to 0 for collapse effect */
+  overflow: hidden;
+  display: block;
+  transition: max-height 0.3s ease-out; /* Animation for the collapsible content */
+}
+
+.collapsible-content img {
+  margin: 20px;
+  border: 2px solid white;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  width: 25%;
+  height: auto;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.collapsible-content .instructions {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.collapsible-content p {
+  padding: 20px;
+  color: white;
+  font-size: 25px;
+  text-align: left;
 }

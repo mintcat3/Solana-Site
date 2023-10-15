@@ -29,50 +29,53 @@
         </div>
     </div>
 
-    <button class="collapsible" onclick="toggleCollapsible()">Show Images</button>
-    <div class="collapsible-content">
+    <button class="collapsible" onclick="toggleCollapsible()">Show Instructions to Get Started</button>
+    <span class="collapsible-content">
         <div>
             <img src="demo images/step1.png" alt="Image 1">
-            <p>Download the phantom wallet chrome extension</p>
+            <p>1. Download the phantom wallet chrome extension</p>
         </div>
         <div>
             <img src="demo images/step 2.png" alt="Image 2">
-            <p>Select "Create a new wallet."</p>
+            <p>2. Select "Create a new wallet."</p>
 
         </div>
         <div>
             <img src="demo images/step 3.png" alt="Image 2">
-            <p>Use any password you would like then click continue</p>
+            <p>3. Use any password you would like then click continue</p>
         </div>
 
         <div>
             <img src="demo images/step 4.png" alt="Image 2">
-            <p>Open the chrome extension, go to the burger menu on the top left, open settings at the bottom, then head into developer settings.</p>
+            <p>4. Open the chrome extension, go to the burger menu on the top left, open settings at the bottom, then head into developer settings.</p>
         </div>
 
         <div>
             <img src="demo images/step 5.png" alt="Image 2">
-            <p>In developer settings make sure you turn on Testnet Mode.</p>
+            <p>5. In developer settings make sure you turn on Testnet Mode.</p>
         </div>
 
         <div>
             <img src="demo images/step 6.png" alt="Image 2">
-            <p>Under settings, head over to your account, then account address, and copy the Solona Devnet address.</p>
+            <p>6. Under settings, head over to your account, then account address, and copy the Solona Devnet address.</p>
         </div>
 
         <div>
             <img src="demo images/step 7.png" alt="Image 2">
-            <p>Head over to the SolFaucet website, paste your address into the textbox. Then set the value of SOL to 10, and select the Devnet option.</p>
+            <p>7. Head over to the SolFaucet website, paste your address into the textbox. Then set the value of SOL to 10, and select the Devnet option.</p>
         </div>
-
-      <!-- Add more images as needed -->
+    </span>
+    <div class = "transaction-div">
+        <h1 class = "Demo-Title">Phantom Wallet Transaction</h1>
+        <button id="connect_button" onClick="connectWallet()">Connect</button>
+        <input class="Input" type="number" placeholder="Sol to send" id="quantity" />
+        <button class="button-1" onClick="sendButtonClick()">Send</button>
     </div>
 
-    <h1>Phantom Wallet Transaction</h1>
-    <button id="connect_button" onClick="connectWallet()">Connect</button>
-    <input class="Input" type="number" placeholder="Sol to send" id="quantity" />
-    <button class="button-1" onClick="sendButtonClick()">Send</button>
-    <p id="status_p"><span id="status"></span></p>
+    <div>
+        <p id="status_p"><span id="status"></span></p>
+    </div>
+
 
     <!-- Include Buffer polyfill -->
     <script>
@@ -99,9 +102,17 @@
     
     <script>
         function toggleCollapsible() {
-          const content = document.querySelector('.collapsible-content');
-          content.style.display = (content.style.display === 'none' || content.style.display === '') ? 'block' : 'none';
+          var content = document.querySelector('.collapsible-content');
+          var button = document.querySelector('.collapsible');
+          
+          if (content.style.maxHeight === '0px' || content.style.maxHeight === '') {
+            content.style.maxHeight = '800px';  /* Adjust the max height to match your desired height */
+            button.textContent = 'Hide Instructions to Get Started';
+          } else {
+            content.style.maxHeight = '0px';
+            button.textContent = 'Show Instructions to Get Started';
+          }
         }
-      </script>
+    </script>
 </body>
 </html>
