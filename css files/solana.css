@@ -4,6 +4,7 @@ html, body{
     background: radial-gradient(black, #18202c);
     overflow-x: hidden;
     max-width: 100%;
+    font-family: sans-serif;
 }
 
 .description-box{

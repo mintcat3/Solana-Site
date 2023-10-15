@@ -5,6 +5,7 @@ html, body{
     background: radial-gradient(black, #18202c);
     overflow-x: hidden;
     max-width: 100%;
+    font-family: sans-serif;
 }
 .hr{
     height: 1px;
@@ -32,19 +33,40 @@ html, body{
     align-self: center;
 }
 .functionality p{
+    line-height: 45px;
     width: 75%;
     height: auto;
     margin: 0 25px;
-    font-size: 2em;
+    font-size: 1.5em;
     color: white;
     text-align: center;
 }
 
 .blockchain-image{
     text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
 }
 
 .blockchain-image img{
+    justify-items: center;
+    align-items: center;
     width: 50%;
     height: auto;
+    margin-top: -100px;
+}
+
+.blockchain-image-desc{
+    margin-top: 50px;
+    display:flex;
+    justify-content: center;
+    align-self: center;
+}
+.blockchain-image-desc p{
+    line-height: 45px;
+    width: 75%;
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
 }

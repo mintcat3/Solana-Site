@@ -36,50 +36,50 @@ width: 30%;
 border-color: rgb(49, 195, 49);
 } */
 let choice = checkbutton("1").value
-let correct_string = 'Correct: Satoshi Nakamoto created Bitcoin in 2008.'
-let incorrect_string = 'Incorrect: They were integral to the creation of other popular cryptocurrency but not Bitcoin.'
+let correct_string = 'Correct: Solana allows for a faster transaction process and data transfer'
+let incorrect_string = 'Incorrect: this defeats the whole purpose of Solana'
 if (choice == 'firstchoice') {
-    format_result("q1answer", false, incorrect_string)
-    highlight_choice(3, "1", 1, 'red')
+    format_result("q1answer", true , correct_string)
+    highlight_choice(2, "1", 1, 'rgb(49, 195, 49)')
 } 
 if (choice =='secondchoice') {
     format_result("q1answer", false, incorrect_string)
-    highlight_choice(3, "1", 2, 'red')
+    highlight_choice(2, "1", 2, 'red')
 }
-if (choice == 'thirdchoice') {
-    format_result("q1answer", true, correct_string)
-    highlight_choice(3, "1", 3, 'rgb(49, 195, 49)')
-} 
 })
 
 document.getElementById("question2").addEventListener("click", function(event) {
 let choice = checkbutton("2").value
-let correct_string = 'Correct: It contains the hash of the previous block.'
-let incorrect_string = 'Incorrect: Close, but it is not the data of the previous block.'
+let correct_string = 'Correct: Blockchain is the core-concept that allows for such speedy processes'
+let incorrect_string = 'Incorrect: Without blockchains, how would Solana be so efficient?'
 if (choice == 'firstchoice') {
-    format_result("q2answer", false, incorrect_string)
-    highlight_choice(2, "2", 1, 'red')
+    format_result("q2answer", true, correct_string)
+    highlight_choice(2, "2", 1, 'rgb(49, 195, 49)')
 } 
 if (choice =='secondchoice') {
-    format_result("q2answer", true, correct_string)
-    highlight_choice(2, "2", 2, 'rgb(49, 195, 49)')
+    format_result("q2answer", false, incorrect_string)
+    highlight_choice(2, "2", 2, 'red')
 }
 })
 
 document.getElementById("question3").addEventListener("click", function(event) {
 let choice = checkbutton("3").value
-let correct_string = 'Correct: Along with a strong encryption, you would need to hack every block in the chain.'
-let incorrect_string = 'Incorrect: Being decentralized does not come with the benefit of security.'
+let correct_string = 'Correct: You are able to utilize Solana in all of the following, including much more!'
+let incorrect_string = 'Incorrect: Although this is true, there are more than just this option.'
 if (choice == 'firstchoice') {
-    format_result("q3answer", true, correct_string)
-    highlight_choice(3, "3", 1, 'rgb(49, 195, 49)')
+    format_result("q3answer", false, incorrect_string)
+    highlight_choice(4, "3", 1, 'red')
 } 
 if (choice =='secondchoice') {
     format_result("q3answer", false, incorrect_string)
-    highlight_choice(3, "3", 2, 'red')
+    highlight_choice(4, "3", 2, 'red')
 }
 if (choice == 'thirdchoice') {
     format_result("q3answer", false, incorrect_string)
-    highlight_choice(3, "3", 3, 'red')
+    highlight_choice(4, "3", 3, 'red')
+} 
+if (choice == 'fourthchoice') {
+    format_result("q3answer", true, correct_string)
+    highlight_choice(4, "3", 4, 'rgb(49, 195, 49)')
 } 
 })
