@@ -81,3 +81,20 @@ html, body{
     filter: blur(0);
     transform: translateX(0);
 }
+
+footer{
+    padding: 40px 0;
+    color: white;
+    background: black;
+}
+
+footer li{
+    padding-right: 50px;
+    float: right;
+    padding: 0 10px;
+    list-style: none;
+}
+
+footer a{
+    color: white;
+}

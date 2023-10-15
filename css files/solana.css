@@ -45,3 +45,20 @@ html, body{
     border:none;
     background:linear-gradient(to right, black, #4ab2c2, black);
 }
+
+footer{
+    padding: 40px 0;
+    color: white;
+    background: black;
+}
+
+footer li{
+    padding-right: 50px;
+    float: right;
+    padding: 0 10px;
+    list-style: none;
+}
+
+footer a{
+    color: white;
+}

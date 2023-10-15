@@ -139,3 +139,20 @@ html, body{
 .item:nth-child(3) {
     transition-delay: 200ms;
 }
+
+footer{
+    padding: 40px 0;
+    color: white;
+    background: black;
+}
+
+footer li{
+    padding-right: 50px;
+    float: right;
+    padding: 0 10px;
+    list-style: none;
+}
+
+footer a{
+    color: white;
+}
