@@ -110,40 +110,86 @@
 
 
     <section class="Quiz">
-        <h2>Quiz</h2>
-        <h3>what da dog doing</h3>
+        <p class="quiz-title">Quiz</p>
+        <p class="question-text">Who was the creator/inventor of Bitcoin? Select one<p>
         <div class="radio-buttons">
             <div id='question1' class="quiz-choices">
-                <input type="radio" name="question1" id="question1choice1" value="firstchoice"> Summer <br> 
-                <input type="radio" name="question1" id="question1choice2" value="secondchoice"> Winter <br> 
-                <input type="radio" name="question1" id="question1choice3" value="thirdchoice"> Rainy
+                <label>
+                    <div id='question1choice1-text' class="choice-text">
+                        <input type="radio" name="question1" id="question1choice1" value="firstchoice">
+                        <span> Vitalik Buterin </span> <br> 
+                    </div>
+                </label>
+                
+                <label>
+                    <div id='question1choice2-text' class="choice-text">
+                        <input type="radio" name="question1" id="question1choice2" value="secondchoice">
+                        <span> Anatoly Yakovenko </span> <br>
+                    </div>
+                </label>
+                
+                <label>
+                    <div id='question1choice3-text' class="choice-text">
+                        <input type="radio" name="question1" id="question1choice3" value="thirdchoice">
+                        <span> Satoshi Nakamoto </span> <br>
+                    </div>
+                </label>
             </div>
 
             <div id="q1answer" class="result"></div>
         </div>
 
-        <h3>what da dog doing2</h3>
+
+        <p class="question-text">Does a block in the blockchain contain the data from the previous block? Select one</p>
         <div class="radio-buttons">
             <div id='question2' class="quiz-choices">
-                <input type="radio" name="question2" id="question2choice1" value="firstchoice"> Summer <br> 
-                <input type="radio" name="question2" id="question2choice2" value="secondchoice"> Winter <br> 
-                <input type="radio" name="question2" id="question2choice3" value="thirdchoice"> Rainy
+                <label>
+                    <div id="question2choice1-text" class="choice-text">
+                        <input type="radio" name="question2" id="question2choice1" value="firstchoice">
+                        <span> Yes </span> <br>
+                    </div>
+                </label>
+                
+                <label>
+                    <div id="question2choice2-text" class="choice-text">
+                        <input type="radio" name="question2" id="question2choice2" value="secondchoice">
+                        <span> No </span> <br>
+                    </div> <br>
+                </label>
             </div>
-
             <div id="q2answer" class="result"></div>
-        </div> <br>
+        </div>
 
-        <h3>what da dog doing3</h3>
+
+        <p class="question-text">What makes cryptocurrencies immune to counterfeiting? Select one</p>
         <div class="radio-buttons">
             <div id='question3' class="quiz-choices">
-                <input type="radio" name="question3" id="question3choice1" value="firstchoice"> Summer <br> 
-                <input type="radio" name="question3" id="question3choice2" value="secondchoice"> Winter <br> 
-                <input type="radio" name="question3" id="question3choice3" value="thirdchoice"> Rainy
+                <label>
+                    <div id="question3choice1-text" class="choice-text">
+                        <input type="radio" name="question3" id="question3choice1" value="firstchoice">
+                        <span> Cryptography (linkage of blocks) </span> <br>
+                    </div>
+                </label>
+
+                <label>
+                    <div id="question3choice2-text" class="choice-text">
+                        <input type="radio" name="question3" id="question3choice2" value="secondchoice">
+                        <span> Decentralized currency </span> <br>
+                    </div>
+                </label>
+
+                <label>
+                    <div id="question3choice3-text" class="choice-text">
+                        <input type="radio" name="question3" id="question3choice3" value="thirdchoice">
+                        <span> All of the above </span> <br>
+                    </div>
+                </label>
             </div>
 
             <div id="q3answer" class="result"></div>
-        </div> <br>
+        </div>
     </section>
+
     <script src="js files/solana_page_quiz.js"></script>
 
 </body>
