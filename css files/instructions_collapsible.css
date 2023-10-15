@@ -8,7 +8,7 @@
 .collapsible {
   display: flex;
   margin: 25px;
-  background-color: #3498db; /* Color for the collapsible button */
+  background-color: #000000; /* Color for the collapsible button */
   color: white;
   cursor: pointer;
   padding: 18px;
