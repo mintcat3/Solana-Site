@@ -8,10 +8,12 @@
     border-bottom: 1px solid #333333;
     position: sticky;
     font-family: Tahoma, sans-serif;
+    z-index: 1;
 }
 
 .navbar #homebut {
-    padding-left: 10%
+    padding-left: 10%;
+    font-weight: 700;
 }
 
 #navbar-right {
