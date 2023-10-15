@@ -20,9 +20,14 @@ header {
     background-repeat: no-repeat;
 }
 
+.center {
+    text-align: center;
+}
+
 h2 {
     font-size: 80px;
     text-align: center;
+    color: #18E5AE;
 }
 
 ul {
@@ -72,22 +77,6 @@ img {
     border-color: black;
 }
 
-.flex {
-    display: flex;
-    justify-content: space-around;
-}
-
-.cryto-display {
-    display: flex;
-    align-items: center;
-}
-
-.coin {
-    margin: 20px;
-    border: 5px solid black;
-    padding: 80px 250px;
-}
-
 
 .collapsible {
     background: linear-gradient(to right,#9f5de4, #8774dc);
@@ -115,3 +104,19 @@ img {
     background-color: transparent;
     box-shadow: black 5px 5px 10px 10px;
   }
+
+  .crypto-title {
+    margin-bottom: auto;
+  }
+
+  .flex {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .coin {
+    margin-bottom: 60px;
+    /* background-color: red; */
+    text-align: center;
+  }
+
